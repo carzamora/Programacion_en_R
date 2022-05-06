@@ -44,7 +44,7 @@
   Hint: "Para ver la documentación de un símbolo como el operador de dos puntos debes usar comillas inversas (o comillas regulares). Esto es para indicarle a R que no estás intentado usar el símbolo en el comando. He aquí como se ve: ?`:`. No te olvides de usar el signo de interrogación en frente."
 
 - Class: text
-  Output: A menudo deseamos más control sobre una secuencia que estamos creando que el operador : puede darnos. La función seq() sirve para este propósito.
+  Output: A menudo deseamos más control sobre una secuencia que estamos creando que el operador `:` puede darnos. La función seq() sirve para este propósito.
 
 - Class: cmd_question
   Output: El uso más básico de seq() hace exactamente lo mismo que el operador `:`. Intenta seq(1, 20) para ver ésto.
