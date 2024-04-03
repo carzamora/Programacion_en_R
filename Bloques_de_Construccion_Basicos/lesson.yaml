@@ -119,7 +119,7 @@
   Output: Como habrás supuesto, R primero substrae 1 de cada elemento de z, luego halla la raíz cuadrada de cada elemento. Esto nos deja con un vector de la misma longitud que el vector original z.
 
 - Class: cmd_question
-  Output: Ahora, creemeos una nueva variable llamada div que halle el valor de z dividido por raiz_c.
+  Output: Ahora, creemos una nueva variable llamada div que halle el valor de z dividido por raiz_c.
   CorrectAnswer: div <- z / raiz_c
   AnswerTests: omnitest(correctExpr = 'div <- z / raiz_c')
   Hint: Ingresa div <- z / raiz_c. Los espacios a cada lado del signo `/` no son necesarios, pero a menudo pueden hacer el código más legible al hacer que se encime menos. Al final, es una preferencia personal.
