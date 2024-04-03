@@ -167,7 +167,7 @@
   Output: Previamente en esta lección calculaste z * 2 + 100. Pretendamos que has cometido un error y que querías sumar 1000 en vez de 100. Podrías retipear la expresión o ...
 
 - Class: cmd_question
-  Output: En muchos entornos de programación la flecha hacia arriba circulará a través de comandos previos. Intenta apretar la flecha hacia arriba en tu teclado hasta que obtengas este comando (z * 2 + 100), luego cambia el 100 por 1000 y presiona Enter. Si lo de la flecha hacia arriba no te funciona, entonces simplemente tipea el comando correcto.
+  Output: En muchos entornos de programación la flecha hacia arriba circulará a través de comandos previos. Intenta apretar la flecha hacia arriba en tu teclado hasta que obtengas este comando (z * 2 + 100) sin los paréntesis, luego cambia el 100 por 1000 y presiona Enter. Si lo de la flecha hacia arriba no te funciona, entonces simplemente tipea el comando correcto.
   CorrectAnswer: z * 2 + 1000
   AnswerTests: omnitest(correctExpr = 'z * 2 + 1000')
   Hint: Si tu entorno no soporta la característica de la flecha hacia arriba, entonces simplemente tipea el comando correcto para seguir avanzando.
