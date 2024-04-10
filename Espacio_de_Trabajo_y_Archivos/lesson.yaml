@@ -168,7 +168,7 @@
 - Class: cmd_question
   Output: Borra el directorio "dir_prueba2" que has creado.
   CorrectAnswer: unlink("dir_prueba2", recursive = TRUE)
-  AnswerTests: omnitest(correctExpr = 'unlink("testdir2", recursive = TRUE)')
+  AnswerTests: omnitest(correctExpr = 'unlink("dir_prueba2", recursive = TRUE)')
   Hint: Usa unlink("dir_prueba2", recursive = TRUE) para conseguir lo que quieres.
 
 - Class: text
