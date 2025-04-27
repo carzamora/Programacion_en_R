@@ -32,7 +32,7 @@
   Hint: Recuerda que la función c() se usa para crear un vector. Si has olvidado cómo se usa, tipea ?c para acceder al archivo de ayuda. No olvides asignar el resultado a una nueva variable llamada vec.
 
 - Class: cmd_question
-  Output: Ahora, crea una variable llamada fv que obtenga el resultado de vec < 1, que se lee como "vec es menor a  1".
+  Output: Ahora, crea una variable llamada fv que obtenga el resultado de vec < 1, que se lee como "vec es menor a 1".
   CorrectAnswer: fv <- vec < 1
   AnswerTests: omnitest(correctExpr = 'fv <- vec < 1')
   Hint: Usa fv <- vec < 1 para asignar el resultado de vec < 1 a una variable llamada fv.
@@ -41,7 +41,7 @@
   Output: ¿Cómo crees que fv se verá? 
   CorrectAnswer: un vector de 4 valores lógicos
   AnswerChoices: un vector de 4 valores lógicos; un valor lógico único
-  AnswerTests: omnitest(correctVal = "un vector de 4 valores lógicos")
+  AnswerTests: omnitest(correctVal = 'un vector de 4 valores lógicos')
   Hint: ¿Recuerdas nuestra lección sobre aritmética de vectores? R realiza muchas operaciones elemento-por-elemento. A estas operaciones las llamamos "vectorizadas".
 
 - Class: cmd_question
@@ -51,10 +51,10 @@
   Hint: Solo tipea fv y presiona Enter para ver su valor.
 
 - Class: text
-  Output: La afirmación vec < 1 es una condición y fv nos dice si cada uno de los elemmentos de nuestro vector numérico vec satisface esta condición.
+  Output: La afirmación vec < 1 es una condición y fv nos dice si cada uno de los elementos de nuestro vector numérico vec satisface esta condición.
 
 - Class: text
-  Output: El primer elemento de vec es 0.5, que es menor a 1 y por lo tanto la afirmación 0.5 < 1 es verdadera (TRUE). El segundo elemento de vec es 55, y 55 es mayor a 1, por lo que la afirmación 55 < 1 es falsa (FALSE). La misma lógica se aplica para el tercer y cuarto elementos.
+  Output: El primer elemento de vec es 0.5, que es menor a 1 y por lo tanto la afirmación 0.5 < 1 es verdadera (TRUE). El segundo elemento de vec es 55, y 55 es mayor a 1, por lo que la afirmación 55 < 1 es falsa (FALSE). La misma lógica se aplica para el tercer y cuarto elemento.
 
 - Class: cmd_question
   Output: Probemos otra. Tipea vec >= 6 sin asignar el resultado a una nueva variable.
@@ -99,10 +99,10 @@
   Hint: Esta es una operación engorrosa! Recuerda que el símbolo ! niega lo que sea que viene después del mismo. Hay también un orden de operaciones aquí. Las condiciones que están encerradas en paréntesis deberían ser evaluadas primero. Luego, busca la manera de salirte al paso.
 
 - Class: text
-  Output: No te preocupes si estas operaciones te fueron engorrosas! Se supone que lo sean. Toma práctica el trabajar con afirmaciones lógicas en R, pero tus esfuerzos serán recompensados en futuras lecciones (e.g., subagrupación y control de estructuras).
+  Output: No te preocupes si estas operaciones te fueron engorrosas. ¡Es normal que lo sean! Toma práctica el trabajar con afirmaciones lógicas en R, pero tus esfuerzos serán recompensados en futuras lecciones (e.g., subagrupación y control de estructuras).
 
 - Class: text
-  Output: Los vectores de caracteres son también muy comunes en R. Se usan comillas dobles para distinguir objetos caracteres, como se ve en el siguiente ejemplo.
+  Output: Los vectores de caracteres también son muy comunes en R. Se usan comillas dobles para distinguir objetos de tipo caracter, como se ve en el siguiente ejemplo.
 
 - Class: cmd_question
   Output: Crea un vector de caracteres que contenga las palabras "Mi", "nombre", y "es". Recuerda encerrar cada palabra por separado en sus propias comillas, para que R sepa que son cadenas de caracteres. Guarda el vector en una variable llamada caract.
@@ -177,10 +177,10 @@
   Output: Debido a que el vector de caracteres LETTERS es más largo que el vector numérico 1:4, R simplemente recicla (o repite) 1:4 hasta que empareja la longitud de LETTERS.
 
 - Class: text
-  Output: Vale la pena también notar que el vector numérico 1:4 es "coaccionado" en un vector de caracteres mediante la función paste().
+  Output: Vale la pena también notar que el vector numérico 1:4 es "coercionado" (o convertido) en un vector de caracteres mediante la función paste().
 
 - Class: text
-  Output: Discutiremos sobre coerción en otra lección, pero todo lo que realmente significa es que los números 1, 2, 3, y 4 en el resulatdo de arriba ya no son números para R, sino caracteres "1", "2", "3", y "4".
+  Output: Discutiremos sobre coerción en otra lección, pero lo que realmente importa es que los números 1, 2, 3, y 4 en el resulatdo de arriba ya no son números para R, sino caracteres "1", "2", "3", y "4", por eso tienen las comillas.
 
 - Class: text
-  Output: Y con esto finalizamos nuestra lección sobre operaciones con vectores. Felicidades! Hasta ahora hemos cubierto operaciones con vectores numéricos, lógicos, y de caracteres, con lo que cubrimos la mayor parte de este tipo de operaciones. En la siguiente lección trabajaremos con valores faltantes, otro tópico que necesitarás dominar para convertirte en un experto en R!
+  Output: Y con esto finalizamos nuestra lección sobre operaciones con vectores. Felicidades! Hasta ahora hemos cubierto operaciones con vectores numéricos, lógicos, y de caracteres, con lo que ya vimos la mayor parte de este tipo de operaciones. En la siguiente lección trabajaremos con valores faltantes, otro tópico que necesitarás dominar para convertirte en un experto en R!
