@@ -38,11 +38,11 @@
   Hint: Usa fv <- vec < 1 para asignar el resultado de vec < 1 a una variable llamada fv.
 
 - Class: mult_question
-  Output: Cómo crees que tf se verá?
+  Output: ¿Cómo crees que fv se verá? 
   CorrectAnswer: un vector de 4 valores lógicos
   AnswerChoices: un vector de 4 valores lógicos; un valor lógico único
-  AnswerTests: omnitest(correctVal = 'un vector de 4 valores lógicos')
-  Hint: Recuerdas nuestra lección sobre aritmética de vectores? R realiza muchas operaciones elemento-por-elemento. A estas operaciones las llamamos "vectorizadas".
+  AnswerTests: omnitest(correctVal = "un vector de 4 valores lógicos")
+  Hint: ¿Recuerdas nuestra lección sobre aritmética de vectores? R realiza muchas operaciones elemento-por-elemento. A estas operaciones las llamamos "vectorizadas".
 
 - Class: cmd_question
   Output: Imprime los contenidos de fv ahora.
@@ -165,7 +165,7 @@
   Hint: Usa paste(1:3, c("X", "Y", "Z"), sep = "") para ver qué pasa cuando unimos dos vectores de igual longitud usando paste().
 
 - Class: text
-  Output: Qué piensas que va a pasar si nuestros vectores son de longitudes diferentes? Recuerda que ya hemos hablado de esto en una lección previa.
+  Output: ¿Qué piensas que va a pasar si nuestros vectores son de longitudes diferentes? Recuerda que ya hemos hablado de esto en una lección previa.
 
 - Class: cmd_question
   Output: Reciclado de vectores! Prueba paste(LETTERS, 1:4, sep = "-"), donde LETTERS ("letras") es una variable predefinida en R que contiene un vector de caracteres de todas las 26 letras del alfabeto inglés.
