@@ -51,13 +51,13 @@
   Hint: Solo tipea fv y presiona Enter para ver su valor.
 
 - Class: text
-  Output: La afirmación vec < 1 es una condición y fv nos dice si cada elemmento correspondiente de nuestro vector numérico vec satisface esta condición.
+  Output: La afirmación vec < 1 es una condición y fv nos dice si cada uno de los elemmentos de nuestro vector numérico vec satisface esta condición.
 
 - Class: text
   Output: El primer elemento de vec es 0.5, que es menor a 1 y por lo tanto la afirmación 0.5 < 1 es verdadera (TRUE). El segundo elemento de vec es 55, y 55 es mayor a 1, por lo que la afirmación 55 < 1 es falsa (FALSE). La misma lógica se aplica para el tercer y cuarto elementos.
 
 - Class: cmd_question
-  Output: Probemos otra. Tipea Type vec >= 6 sin asignar el resultado a una nueva variable.
+  Output: Probemos otra. Tipea vec >= 6 sin asignar el resultado a una nueva variable.
   CorrectAnswer: vec >= 6
   AnswerTests: omnitest(correctExpr = 'vec >= 6')
   Hint: No crees una nueva variable para ésta. Simplemente queremos ver el resultado de vec >= 6. Asegúrate de que no haya espacios entre los símbolos > y =. Piensa en ellos como un único símbolo representando "mayor o igual a".
