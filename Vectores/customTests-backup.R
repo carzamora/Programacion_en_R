@@ -1,3 +1,5 @@
+# Al parecer este archivo ya no es necesario!! 
+
 expr_creates_var <- function(correctName=NULL){
   e <- get("e", parent.frame())
   # TODO: Eventually make auto-detection of new variables an option.
