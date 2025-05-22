@@ -138,7 +138,7 @@
   Hint: Agrega tu nombre al final del vector caract usando la función c(). Asegúrate de asignar el resulado a una nueva variable llamada nombre. Si tu nombre fuese "Swirl" entonces tipearías nombre <- c(caract, "Swirl").
 
 - Class: cmd_question
-  Output: Héchale in vistazo a los contenidos de nombre.
+  Output: Échale un vistazo a los contenidos de nombre.
   CorrectAnswer: nombre
   AnswerTests: omnitest(correctExpr = 'nombre')
   Hint: Tipea nombre y presiona Enter para ver sus contenidos.
