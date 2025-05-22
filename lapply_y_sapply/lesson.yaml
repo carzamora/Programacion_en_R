@@ -17,7 +17,7 @@
   Output: Cada una de las funciones *apply SEPARARÁ algunos datos en piezas más pequeñas, APLICARÁ una función a cada pieza, y luego COMBINARÁ los resultados. Una discusión más detallada de esta estrategia se encuentra en el artículo publicado en el Journal of Statistical Software por Hadley Wickham titulado 'The Split-Apply-Combine Strategy for Data Analysis'.
 
 - Class: text
-  Output: 'A través de esta lección usaremos el conjunto de datos Flags ("Banderas") ubicada en el UCI Machine Learning Repository. Este conjunto de datos contiene detalles de varias naciones y sus banderas. Más información puede encontrarse en http://archive.ics.uci.edu/ml/datasets/Flags.'
+  Output: 'A través de esta lección usaremos el conjunto de datos Flags ("Banderas") ubicada en el UCI Machine Learning Repository. Este conjunto de datos contiene detalles de varias naciones y sus banderas. Más información puede encontrarse en https://archive.ics.uci.edu/ml/datasets/Flags (https://doi.org/10.24432/C52C7Z).'
 
 - Class: text
   Output: ¡Vamos a empezar para que puedas ver cómo trabajan estas funciones especiales!
@@ -38,13 +38,13 @@
   Output: Esto nos dice que hay 194 filas, u observaciones, y 30 columnas, o variables. Cada observación es un país y cada variable describe algunas características de ese país o su bandera. Para obtener una descripción más completa (en inglés) del conjunto de datos en un archivo de texto por separado, tipea viewinfo() cuando regreses a la línea de comandos (>).
 
 - Class: cmd_question
-  Output: Como con cualquier conjunto de datos, nos gustaría conocer en qué formato las variables han sido almacenadas. En otras palabras, ¿cuál es la 'clase' ("class") de cada variable? ¿Qué pasa si probamos class(flags)? Inténtalo.
+  Output: Como con cualquier conjunto de datos, nos gustaría saber en qué formato han sido almacenadas las variables. En otras palabras, ¿cuál es la 'clase' ("class") de cada variable? ¿Qué pasa si probamos class(flags)? Inténtalo.
   CorrectAnswer: class(flags)
   AnswerTests: omnitest(correctExpr='class(flags)')
   Hint: Tipea class(flags) para ver qué pasa
 
 - Class: text
-  Output: Esto simplemente nos dice que el conjunto de datos entero está almacenado como un 'data.frame' ("marco de datos"), lo que no responde nuestra pregunta. Lo que realmente necesitamos hacer es llamar a la función class() en cada columna individual. Mientras que podríamos hacer ésto manualmente (i.e., una columna a la vez), es mucho más rápido si podemos automatizar el proceso. ¡Suena como un bucle!
+  Output: Esto simplemente nos dice que el conjunto de datos entero está almacenado como un 'data.frame' ("marco de datos"), lo que no responde nuestra pregunta. Lo que realmente necesitamos hacer es llamar a la función class() en cada columna individual. Mientras que podríamos hacer ésto manualmente (i.e., una columna a la vez), es mucho más rápido si podemos automatizar el proceso. ¡Suena como a hacer un bucle!
 
 - Class: text
   Output: La función lapply() toma una lista como entrada, aplica una función a cada elemento de la lista, y luego regresa una lista de la misma longitud que la lista original. Dado que un marco de datos es realmente sólo una lista de vectores (puedes ver esto con as.list(flags)), podemos usar lapply() para aplicar la función class() a cada columna del conjunto de datos flags. ¡Veámosla en acción!
@@ -68,10 +68,10 @@
   Hint: Tipea class(cls_list) para confirmar que lapply() regresó una lista
 
 - Class: text
-  Output: Como era esperable, obtuvimos una lista de longitud 30 -- un elemento por cada variable/columna. El resultado podría ser considerablemente más compacto si pudiésemos representarlo como un vector en vez de una lista.
+  Output: Como era de esperar, obtuvimos una lista de longitud 30, un elemento por cada variable/columna. El resultado podría ser considerablemente más compacto si pudiésemos representarlo como un vector en vez de una lista.
 
 - Class: cmd_question
-  Output: Puede que recuerdes a partir de una lección previa que las listas son más útiles para almacenar múltiples clases de datos. En este caso, dado que cada elemento de la lista regresada por lapply() es un vector de caracteres de longitud uno (i.e., "íntegro" y "vector"), podemos simplificar cls_list a un vector de caracteres. Para hacer esto manualmente tipea as.character(cls_list).
+  Output: Puede que recuerdes, a partir de una lección previa, que las listas son más útiles para almacenar múltiples clases de datos. En este caso, dado que cada elemento de la lista regresada por lapply() es un vector de caracteres de longitud uno (i.e., "íntegro" y "vector"), podemos simplificar cls_list a un vector de caracteres. Para hacer esto manualmente tipea as.character(cls_list).
   CorrectAnswer: as.character(cls_list)
   AnswerTests: omnitest(correctExpr='as.character(cls_list)')
   Hint: Tipea as.character(cls_list) para coaccionar cls_list a un vector de caracteres
@@ -185,7 +185,7 @@
   Output: Como hemos visto, sapply() siempre intenta simplificar el resultado dado por lapply(). Lo ha hecho exitosamente en cada uno de los ejemplos que hemos visto hasta ahora. Veamos un ejemplo en el que sapply() no puede descifrar cómo simplificar el resultado y por lo tanto regresa una lista, no diferente a lo que hace lapply().
 
 - Class: cmd_question
-  Output: Cuando se da un vector, la función unique() regersa un vector con todos los elementos duplicados removidos. En otras palabras, unique() regresa un vector que incluye sólamente a los elementos únicos ("unique"). Para ver cómo funciona esto, prueba unique(c(3, 4, 5, 5, 5, 6, 6)).
+  Output: Cuando se da un vector, la función unique() regresa un vector con todos los elementos duplicados removidos. En otras palabras, unique() regresa un vector que incluye sólamente a los elementos únicos ("unique"). Para ver cómo funciona esto, prueba unique(c(3, 4, 5, 5, 5, 6, 6)).
   CorrectAnswer: unique(c(3, 4, 5, 5, 5, 6, 6))
   AnswerTests: omnitest(correctExpr='unique(c(3, 4, 5, 5, 5, 6, 6))')
   Hint: Tipea unique(c(3, 4, 5, 5, 5, 6, 6)) para ver cómo la función unique() trabaja
