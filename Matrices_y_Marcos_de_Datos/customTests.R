@@ -1,4 +1,6 @@
-expr_creates_var <- function(correctName=NULL){
+# Al parecer estas funciones ya no son necesarias acá, quizá antes no estaban en el paquete swirl 
+# les agregué a las tres "_OLD" para que no se confundan, después creo que simplemente hay que eliminarlas
+expr_creates_var_OLD <- function(correctName=NULL){
   e <- get("e", parent.frame())
   # TODO: Eventually make auto-detection of new variables an option.
   # Currently it can be set in customTests.R
@@ -30,7 +32,7 @@ expr_creates_var <- function(correctName=NULL){
 }
 
 # Returns TRUE if the user has calculated a value equal to that calculated by the given expression.
-calculates_same_value <- function(expr){
+calculates_same_value_OLD <- function(expr){
   e <- get("e", parent.frame())
   # Calculate what the user should have done.
   eSnap <- cleanEnv(e$snapshot)
@@ -40,7 +42,7 @@ calculates_same_value <- function(expr){
   return(passed)
 }
 
-omnitest <- function(correctExpr=NULL, correctVal=NULL, strict=FALSE){
+omnitest_OLD <- function(correctExpr=NULL, correctVal=NULL, strict=FALSE){
   e <- get("e", parent.frame())
   # Trivial case
   if(is.null(correctExpr) && is.null(correctVal))return(TRUE)
