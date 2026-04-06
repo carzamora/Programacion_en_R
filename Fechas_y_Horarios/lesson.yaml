@@ -14,7 +14,7 @@
   Output: Las fechas ("dates") están representadas por la clase 'Date' y los horarios son representados por las clases 'POSIXct' y 'POSIXlt'. Internamente, las fechas son almacenadas como el número de días desde el 1970-01-01 y los horarios son almacenados como el número de segundos desde 1970-01-01 (para 'POSIXct') o una lista de segundos, minutos, horas, etc. (para 'POSIXlt').
 
 - Class: cmd_question
-  Output: Empecemos por usar d1 <- Sys.Date() para obtener la fecha actual y almacenarla en la variable d1 (esto es, la letra "d" y el número 1).
+  Output: Empecemos por usar d1 <- Sys.Date() para obtener la fecha actual y almacenarla en la variable d1 (recuerda que d1 es el nombre de la variable u objeto que vamos a crear).
   CorrectAnswer: d1 <- Sys.Date()
   AnswerTests: omnitest(correctExpr='d1 <- Sys.Date()')
   Hint: Tipea d1 <- Sys.Date() para obtener la fecha actual y almacenarla en una nueva variable llamda d1
