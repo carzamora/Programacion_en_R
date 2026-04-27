@@ -23,7 +23,7 @@
   Hint: Usa el operador de igualdad y tipea TRUE == TRUE
 
 - Class: text
-  Output: Como pasa en las aritméticas, las expresiones lógicas pueden ser agrupadas por paréntesis de modo a que la expresión entera (TRUE == TRUE) == TRUE se evalua como TRUE.
+  Output: Como pasa en las aritméticas, las expresiones lógicas pueden ser agrupadas por paréntesis de modo a que la expresión entera (TRUE == TRUE) == TRUE se evalúa como TRUE.
 
 - Class: cmd_question
   Output: Para probar esta propiedad, intenta evaluar (FALSE == TRUE) == FALSE .
@@ -38,7 +38,7 @@
   Hint: Usa el operar de igualdad y tipea 6 == 7
 
 - Class: text
-  Output: La expresión previa se evalua como FALSE debido a que 6 es menor a 7. Por suerte, existen operadores de desigualdad que nos permiten evaluar si un valor es menor a o mayor a otro valor.
+  Output: La expresión previa se evalúa como FALSE debido a que 6 es menor a 7. Por suerte, existen operadores de desigualdad que nos permiten evaluar si un valor es menor a o mayor a otro valor.
 
 - Class: cmd_question
   Output: El operador menor a `<` evalúa si el número a la izquierda del operador (llamado el operando izquierdo) es menor al número a la derecha del operador (llamado operando derecho). Escribe una expresión para evaluar si 6 es menor a 7.
@@ -56,7 +56,7 @@
   Output: Ten presente que existen los operadores correspondientes mayor a `>` y mayor-o-igual-a `>=`.
 
 - Class: mult_question
-  Output: ¿Cuál de las siguientes se evalua como FALSE?
+  Output: ¿Cuál de las siguientes se evalúa como FALSE?
   CorrectAnswer: 9 >= 10
   AnswerChoices: 9 >= 10; 7 == 7; 6 < 8; 0 > -36
   AnswerTests: omnitest(correctVal='9 >= 10')
@@ -70,7 +70,7 @@
   Hint: Si hace falta, puedes evaluar cada expresión en una sesión de R por separado para encontrar la respuesta correcta.
 
 - Class: cmd_question
-  Output: El siguiente operador que discutiremos es el operador de "no-igualdad" representado por `!=`. El operador de no-igualdad evalua si dos valores son desiguales, de modo a que TRUE != FALSE se evalua como TRUE. Al igual que con el operador de igualdad, `!=` puede ser mejor usado también con números. Intenta escribir una expresión para ver si 5 no es igual a 7.
+  Output: El siguiente operador que discutiremos es el operador de "no-igualdad" representado por `!=`. El operador de no-igualdad evalúa si dos valores son desiguales, de modo a que TRUE != FALSE se evalúa como TRUE. Al igual que con el operador de igualdad, `!=` puede ser mejor usado también con números. Intenta escribir una expresión para ver si 5 no es igual a 7.
   CorrectAnswer: 5 != 7
   AnswerTests: omnitest(correctExpr='5 != 7')
   Hint: Usa el operador de no-igualdad y tipea 5 != 7
@@ -85,7 +85,7 @@
   Output: Tomemos un momento para repasar. El operador de igualdad `==` evalúa si dos valores booleanos o números son iguales, el operador de no-igualdad `!=` evalúa si dos valores booleanos o números son desiguales, y el operador NOT `!` niega expresiones lógicas de modo a que expresiones que son TRUE se convierten en FALSE y expresiones FALSE se vuelven TRUE.
 
 - Class: mult_question
-  Output: ¿Cuál de las siguientes se evalua como FALSE?
+  Output: ¿Cuál de las siguientes se evalúa como FALSE?
   CorrectAnswer: "!(0 >= -1)"
   AnswerChoices: "!(0 >= -1); !FALSE; 7 != 8; 9 < 10"
   AnswerTests: omnitest(correctVal='!(0 >= -1)')
@@ -102,13 +102,13 @@
   Output: En algún momento puede que necesites examinar relaciones entre expresiones lógicas múltiples. Es entonces cuando los operadores AND ("y") y OR ("o") entran en la escena.
 
 - Class: cmd_question
-  Output: Veamos cómo el operador AND trabaja. Hay dos operadores AND en R, `&` y `&&`. Ambos operadores trabajan de manera similar. Si los operandos derecho e izquierdo de AND son ambos TRUE la expresión entera es TRUE, de otra manera es FALSE. Por ejemplo, TRUE & TRUE se evalua como TRUE. Intenta tipeando FALSE & FALSE para ver cómo se evalua.
+  Output: Veamos cómo el operador AND trabaja. Hay dos operadores AND en R, `&` y `&&`. Ambos operadores trabajan de manera similar. Si los operandos derecho e izquierdo de AND son ambos TRUE la expresión entera es TRUE, de otra manera es FALSE. Por ejemplo, TRUE & TRUE se evalúa como TRUE. Intenta tipeando FALSE & FALSE para ver cómo se evalúa.
   CorrectAnswer: FALSE & FALSE
   AnswerTests: omnitest(correctExpr='FALSE & FALSE')
   Hint: Sólo para ilustrar cómo el operador AND funciona tipea FALSE & FALSE
 
 - Class: cmd_question
-  Output: Puedes usar el operador `&` para evaluar AND a través de un vector. La versión `&&` de AND solamente evalua el primer miembro de un vector. Probemos ambos para practicar. Tipea la expresión TRUE & c(TRUE, FALSE, FALSE).
+  Output: Puedes usar el operador `&` para evaluar AND a través de un vector. La versión `&&` de AND solamente evalúa el primer miembro de un vector. Probemos ambos para practicar. Tipea la expresión TRUE & c(TRUE, FALSE, FALSE).
   CorrectAnswer: TRUE & c(TRUE, FALSE, FALSE)
   AnswerTests: omnitest(correctExpr='TRUE & c(TRUE, FALSE, FALSE)')
   Hint: Ahora para ver cómo el operador AND trabaja con un vector tipea TRUE & c(TRUE, FALSE, FALSE)
@@ -126,7 +126,7 @@
   Output: En este caso, el operando izquierdo solamente es evaluado con el primer miembro del operando derecho (el vector). El resto de los elementos en el vector no son evaluados para nada en esta expresión.
 
 - Class : text
-  Output: El operador OR sigue un conjunto similar de reglas. La versión `|` de OR evalua OR a lo largo de todo un vector, mientras que la versión `||` de OR solamente evalua el primer miembro de un vector.
+  Output: El operador OR sigue un conjunto similar de reglas. La versión `|` de OR evalúa OR a lo largo de todo un vector, mientras que la versión `||` de OR solamente evalúa el primer miembro de un vector.
 
 - Class : text
   Output: Una expresión usando el operador OR se evaluará como TRUE si el operando izquierdo o el operando derecho son TRUE. Si ambos son TRUE, la expresión se evaluará como TRUE. Sin embargo, si ninguno es TRUE, entonces la expresión será FALSE.
@@ -153,17 +153,17 @@
   Hint: Visualiza cómo funciona el orden de las operaciones tipeando 5 > 8 || 6 != 8 && 4 > 3.9
 
 - Class : text
-  Output: Vayamos paso por paso por el orden de las operaciones del caso anterior. Primero los operandos izquierdo y derecho del operador AND son evaluados. 6 no es igual a 8, 4 es mayor que 3.9, por lo tanto ambos operandos son TRUE y la expresión resultante `TRUE && TRUE` se evalua como TRUE. Luego el operando izquierdo del operador OR es evaluado. 5 no es mayor que 8, por lo que la expresión entera se reduce a FALSE  || TRUE. Dado que el operando derecho de esta expresión es TRUE la expresión entera se evalua como TRUE.
+  Output: Vayamos paso por paso por el orden de las operaciones del caso anterior. Primero los operandos izquierdo y derecho del operador AND son evaluados. 6 no es igual a 8, 4 es mayor que 3.9, por lo tanto ambos operandos son TRUE y la expresión resultante `TRUE && TRUE` se evalúa como TRUE. Luego el operando izquierdo del operador OR es evaluado. 5 no es mayor que 8, por lo que la expresión entera se reduce a FALSE  || TRUE. Dado que el operando derecho de esta expresión es TRUE la expresión entera se evalúa como TRUE.
 
 - Class: mult_question
-  Output: ¿Cuál de las siguientes expresiones se evalua como TRUE?
+  Output: ¿Cuál de las siguientes expresiones se evalúa como TRUE?
   CorrectAnswer: TRUE && FALSE || 9 >= 4 && 3 < 6
   AnswerChoices: TRUE && FALSE || 9 >= 4 && 3 < 6; TRUE && 62 < 62 && 44 >= 44; 99.99 > 100 || 45 < 7.3 || 4 != 4.0; FALSE || TRUE && FALSE
   AnswerTests: omnitest(correctVal='TRUE && FALSE || 9 >= 4 && 3 < 6')
   Hint: Trata de evaluar cada expresión aisladamente y llegar a la respuesta
 
 - Class: mult_question
-  Output: ¿Cuál de las siguientes expresiones se evalua como FALSE?
+  Output: ¿Cuál de las siguientes expresiones se evalúa como FALSE?
   CorrectAnswer: FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5
   AnswerChoices: FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5; FALSE || TRUE && 6 != 4 || 9 > 4; !(8 > 4) ||  5 == 5.0 && 7.8 >= 7.79; 6 >= -9 && !(6 > 7) && !(!TRUE)
   AnswerTests: omnitest(correctVal='FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5')
@@ -173,13 +173,13 @@
   Output: Ahora que estás familiarizado con los operadores lógicos de R puedes tomar ventaja de algunas funciones que R provee para trabajar con expresiones lógicas.
 
 - Class : cmd_question
-  Output: La función isTRUE() toma un argumento. Si ese argumento se evalua como TRUE, la función regresará TRUE. De otra manera, la función regresará FALSE. Intenta usar esta función tipeando isTRUE(6 > 4)"
+  Output: La función isTRUE() toma un argumento. Si ese argumento se evalúa como TRUE, la función regresará TRUE. De otra manera, la función regresará FALSE. Intenta usar esta función tipeando isTRUE(6 > 4)"
   CorrectAnswer: isTRUE(6 > 4)
   AnswerTests: omnitest(correctExpr='isTRUE(6 > 4)')
   Hint: Prueba isTRUE() tipeando isTRUE(6 > 4)
 
 - Class: mult_question
-  Output: ¿Cuál de las siguientes se evalua como TRUE?
+  Output: ¿Cuál de las siguientes se evalúa como TRUE?
   CorrectAnswer: !isTRUE(4 < 3)
   AnswerChoices: isTRUE(!TRUE); isTRUE(3); isTRUE(NA); !isTRUE(4 < 3); !isTRUE(8 != 5)
   AnswerTests: omnitest(correctVal='!isTRUE(4 < 3)')
@@ -192,23 +192,23 @@
   Hint: Si quieres ver si los dos objetos son idénticos tipea identical('twins', 'twins')
 
 - Class: mult_question
-  Output: ¿Cuál de las siguientes se evalua como TRUE?
+  Output: ¿Cuál de las siguientes se evalúa como TRUE?
   CorrectAnswer: identical(5 > 4, 3 < 3.1)
   AnswerChoices: identical(5 > 4, 3 < 3.1); identical(4, 3.1); identical('hello', 'Hello'); !identical(7, 7)
   AnswerTests: omnitest(correctVal='identical(5 > 4, 3 < 3.1)')
   Hint: identical() se evaluará como TRUE solamente si sus argumentos son exactamente los mismos
 
 - Class : cmd_question
-  Output: Deberías también estar al tanto de la función xor(), que toma dos argumentos. La función xor() se refiere a OR exclusivo. Si un argumento se evalua como TRUE y un argumento se evalua como FALSE, entonces esta función regresará TRUE, de otra manera regresará FALSE. Prueba la función xor() tipeando xor(5 == 6, !FALSE)"
+  Output: Deberías también estar al tanto de la función xor(), que toma dos argumentos. La función xor() se refiere a OR exclusivo. Si un argumento se evalúa como TRUE y un argumento se evalúa como FALSE, entonces esta función regresará TRUE, de otra manera regresará FALSE. Prueba la función xor() tipeando xor(5 == 6, !FALSE)"
   CorrectAnswer: xor(5 == 6, !FALSE)
   AnswerTests: omnitest(correctExpr='xor(5 == 6, !FALSE)')
-  Hint: EValua la función xor() tipeando xor(5 == 6, !FALSE)
+  Hint: Evalúa la función xor() tipeando xor(5 == 6, !FALSE)
 
 - Class : text
-  Output: 5 == 6 se evalua como FALSE, !FALSE se evalua como TRUE, por lo tanto xor(FALSE, TRUE) se evalua como TRUE. Por el otro lado, si el primer argumento se cambiase a 5 == 5 y el segundo argumento permaneciese igual entonces ambos argumentos seŕia TRUE, por lo que xor(TRUE, TRUE) sería evaluada como FALSE.
+  Output: 5 == 6 se evalúa como FALSE, !FALSE se evalúa como TRUE, por lo tanto xor(FALSE, TRUE) se evalúa como TRUE. Por el otro lado, si el primer argumento se cambiase a 5 == 5 y el segundo argumento permaneciese igual entonces ambos argumentos seŕia TRUE, por lo que xor(TRUE, TRUE) sería evaluada como FALSE.
 
 - Class: mult_question
-  Output: ¿Cuál de las siguientes se evalua como FALSE?
+  Output: ¿Cuál de las siguientes se evalúa como FALSE?
   CorrectAnswer: xor(4 >= 9, 8 != 8.0)
   AnswerChoices: xor(4 >= 9, 8 != 8.0); xor(!isTRUE(TRUE), 6 > -1); xor(identical(xor, 'xor'), 7 == 7.0); xor(!!TRUE, !!FALSE)
   AnswerTests: omnitest(correctVal='xor(4 >= 9, 8 != 8.0)')
@@ -264,7 +264,7 @@
   Hint: Usa la función all() en el vector lógico producido por `ints > 0`
 
 - Class: mult_question
-  Output: ¿Cuál de las siguientes se evalua como TRUE?
+  Output: ¿Cuál de las siguientes se evalúa como TRUE?
   CorrectAnswer: any(ints == 10)
   AnswerChoices: any(ints == 10); all(ints == 10); all(c(TRUE, FALSE, TRUE)); any(ints == 2.5)
   AnswerTests: omnitest(correctVal='any(ints == 10)')
