@@ -1,7 +1,14 @@
 # Programación en R
-Curso en swirl sobre "Programación en R" en español que cubre los aspectos básicos del lenguaje de programación R, el que es utilizado para la manipulación y análisis estadístico de datos. Este curso ha sido adaptado por el [Dr. Alcides Chaux](https://github.com/alcideschaux) para su uso en español a partir del curso correspondiente alojado en el repositorio de cursos oficial de swirl en [https://github.com/swirldev/swirl_courses](https://github.com/swirldev/swirl_courses).
 
-Este curso puede ser usado con la versión original (en inglés) de swirl, disponible a través de CRAN, o con la versión en español, según se muestra más abajo.
+Curso en swirl sobre "Programación en R" en español que cubre los aspectos básicos del lenguaje de programación R, utilizado para la manipulación y análisis estadístico de datos.
+
+Este curso está basado en el material original del repositorio oficial de cursos de swirl en [https://github.com/swirldev/swirl_courses](https://github.com/swirldev/swirl_courses).
+
+La adaptación inicial al español fue realizada por el [Dr. Alcides Chaux](https://github.com/alcideschaux) 
+
+Posteriormente, este material ha sido modificado y actualizado por el [Dr. Carlos Zamora-Manzur](https://github.com/carzamora), corrigiendo errores, incorporando mejoras en los contenidos, correcciones conceptuales y ajustes varios para mantener la compatibilidad con versiones recientes de R.
+
+Este curso puede utilizarse tanto con la versión original de swirl (en inglés), disponible en CRAN, como con versiones adaptadas al español.
 
 ## Instalación del curso
 Para instalar el curso debes tener primero swirl instalado en R. Si ya tienes instalado swirl en tu sistema puedes obviar los siguientes 3 pasos y pasar directo a la instalación del curso propiamente dicho. Para instalar la versión original en inglés desde CRAN abre R/RStudio y usa:
@@ -10,13 +17,13 @@ Para instalar el curso debes tener primero swirl instalado en R. Si ya tienes in
 install.packages("swirl")
 ```
 
-Puedes instalar la versión en español de swirl usando el comando:
+Te recomiendo instalar una versión actualizada de swirl para mantener compatibilidad con cursos alojados en GitHub usando el comando:
 
 ```
-devtools::install_github("alcideschaux/swirl-spa")
+remotes::install_github("carzamora/swirl")
 ```
 
-Ten en cuenta que para ejecutar el código anterior debes tener instalado el paquete `devtools` en tu sistema. Una vez que tengas instalado swirl carga la librería correspondiente con:
+Ten en cuenta que para ejecutar el código anterior debes tener instalado el paquete `remotes` en tu sistema. Una vez que tengas instalado swirl carga el paquete con:
 
 ```
 library(swirl)
@@ -25,10 +32,10 @@ library(swirl)
 Puedes instalar el curso alojado en este repositorio usando el comando:
 
 ```
-install_course_github("alcideschaux", "Programacion_en_R")
+install_course_github("carzamora", "Programacion_en_R")
 ```
 
-Alternativamente, se puede instalar este curso bajándolo como archivo comprimido haciendo click en [Programacion_en_R.zip](https://github.com/alcideschaux/Programacion_en_R/blob/master/Programacion_en_R.zip). Una vez bajado el archivo, se debe ingresar el siguiente comando en R/RStudio:
+Alternativamente, se puede instalar este curso bajándolo como archivo comprimido haciendo click en [Programacion_en_R.zip](https://github.com/carzamora/Programacion_en_R/archive/refs/heads/main.zip). Una vez bajado el archivo, se debe ingresar el siguiente comando en R/RStudio:
 
 ```
 install_course_zip("~Downloads/Programacion_en_R.zip")
@@ -57,7 +64,7 @@ Este curso de "Programación en R" contiene las siguientes lecciones:
 14. Gráficos de base
 15. Evaluación del curso
 
-## Problemas conocidos
+## Problemas conocidos (esto ya no deviera ocurrir en versiones recientes)
 Aquellos usuarios de Microsoft Windows podrían observar símbolos inusuales reemplazando los caracteres acentuados. Esto es porque Windows utiliza por defecto un sistema de codificación ([Windows 1252](http://es.wikipedia.org/wiki/Windows-1252)) distinto al de Linux ([UTF-8](http://es.wikipedia.org/wiki/UTF-8)). Esto se puede resolver fácilmente desde RStudio, cambiando el sistema de codificación para que los caracteres acentuados se muestren correctamente.
 
 Para cambiar el sistema de codificación lanza RStudio y abre la ventana de opciones desde `Tools -> Global Options`.
@@ -76,4 +83,4 @@ Recuerda reiniciar RStudio antes de volver a cargar `swirl`, para que los cambio
 Siguiendo la política establecida en el repositorio oficial de cursos de swirl, este curso puede utilizarse libre y gratuitamente.
 
 ## Reporte de errores
-Si encuentras algún error en curso por favor notificalo a [alcideschaux@uninorte.edu.py](mailto:alcideschaux@uninorte.edu.py).
+Si encuentras algún error en curso por favor notificalo a [czamora@ucsc.cl](mailto:czamora@ucsc.cl).
