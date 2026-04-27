@@ -47,7 +47,7 @@
   Output: Como siempre, R se esfuerza mucho para darte algo que tenga sentido teniendo en cuenta la información que le has proporcionado. Primero, R nota que el marco de datos que le has dado tiene sólo dos columnas, así que asume que quieres plotear una columna contra la otra.
 
 - Class: text
-  Output: Segundo, dado que no hemos puesto etiquetas para ninguno de los ejes, R usa los nombres de las columnas. Tercero, R crea marcas en los ejes usando números redondeados y los etiquea acordemente. Cuarto, R usa los otros valores por defecto que están en plot().
+  Output: Segundo, dado que no hemos puesto etiquetas para ninguno de los ejes, R usa los nombres de las columnas. Tercero, R crea marcas en los ejes usando números redondeados y los etiqueta acordemente. Cuarto, R usa los otros valores por defecto que están en plot().
 
 - Class: text
   Output: Pasaremos un tiempo explorando la función plot(), pero muchos de los tópicos discutidos aquí se aplicarán a otras funciones gráficas de R. Nota que la palabra "plot" es una abreviación de "scatterplot", o sea, "gráfico de dispersión".
@@ -80,10 +80,10 @@
   Hint: Tipea plot(x = cars$dist, y = cars$speed) para crear el plot
 
 - Class: text
-  Output: Probablemente tenga más sentido que la velocidad vaya en el eje x dado que la distancia de frenado es una función de la velocidad más que a la inversa. Asi que, para el resto de las preguntas en esta parte de la lección, asigna siempre los argumentos en concordancia con lo dicho.
+  Output: Probablemente tenga más sentido que la velocidad vaya en el eje x dado que la distancia de frenado es una función de la velocidad más que a la inversa. Así que, para el resto de las preguntas en esta parte de la lección, asigna siempre los argumentos en concordancia con lo dicho.
 
 - Class: text
-  Output: De hecho, puedes asumir que las respuestas para las siguientes preguntas son todas de la forma plot(x = cars$speed, y = cars$dist, ...) pero con varios argumentos usandos en lugar de ...
+  Output: De hecho, puedes asumir que las respuestas para las siguientes preguntas son todas de la forma plot(x = cars$speed, y = cars$dist, ...) pero con varios argumentos usados en lugar de ...
 
 - Class: cmd_question
   Output: Recrea el plot con la etiqueta del eje x puesta como "Velocidad".
@@ -122,7 +122,7 @@
   Hint: Tipea plot(cars, sub = "Mi Sub del Plot") para crear el plot
 
 - Class: text
-  Output: La página de ayuda de plot (?plot) sólo cubre un número pequeño de los muchos argumentos que pueden ser pasados a plot() y otras funciones gráficas. Para empezar a explorar las muchas otras opciones, mira a ?par. Veamos algunas de las más comúnmente usadas. Continua usando plot(cars, ...) como la respuseta base a estas preguntas.
+  Output: La página de ayuda de plot (?plot) sólo cubre un número pequeño de los muchos argumentos que pueden ser pasados a plot() y otras funciones gráficas. Para empezar a explorar las muchas otras opciones, mira a ?par. Veamos algunas de las más comúnmente usadas. Continúa usando plot(cars, ...) como la respuesta base a estas preguntas.
 
 - Class: cmd_question
   Output: Plotea cars con un color rojo (usa col = 2 para obtener este efecto).
