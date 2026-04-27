@@ -23,10 +23,10 @@
   Output: Simulemos el lanzamiento de cuatro dados de seis caras con sample(1:6, 4, replace = TRUE).
   CorrectAnswer: sample(1:6, 4, replace = TRUE)
   AnswerTests: match_call('sample(1:6, 4, replace = TRUE)')
-  Hint: Tipea sample(1:6, 4, replace = TRUE) para simular el lanzamiendo de 4 dados de seis caras
+  Hint: Tipea sample(1:6, 4, replace = TRUE) para simular el lanzamiento de 4 dados de seis caras
 
 - Class: cmd_question
-  Output: Ahora repite el comando para ver cómo difiere el resultado (la probabildiad de obtener exactamente el mismo resultado es (1/6)^4 = 0.00077, ¡una probabilidad muy pequeña!)
+  Output: Ahora repite el comando para ver cómo difiere el resultado (la probabilidad de obtener exactamente el mismo resultado es (1/6)^4 = 0.00077, ¡una probabilidad muy pequeña!)
   CorrectAnswer: sample(1:6, 4, replace = TRUE)
   AnswerTests: match_call('sample(1:6, 4, replace = TRUE)')
   Hint: Tipea sample(1:6, 4, replace = TRUE) para simular el lanzamiento de 4 dados de seis caras
@@ -44,7 +44,7 @@
   Output: Dado que el último comando muestreó sin reemplazo, ningún número aparece más de una vez en el resultado.
 
 - Class: cmd_question
-  Output: LETTERS ("letras") es una variable predefinida en R conteniendo un vector de todas las 26 letras del alfabeto inglés. Hechémosle un vistazo.
+  Output: LETTERS ("letras") es una variable predefinida en R conteniendo un vector de todas las 26 letras del alfabeto inglés. Echémosle un vistazo.
   CorrectAnswer: LETTERS
   AnswerTests: omnitest(correctExpr='LETTERS')
   Hint: Tipea LETTERS para imprimir sus contenidos en la consola
@@ -89,7 +89,7 @@
   Output: Cada probabilidad en R tiene una función r*** (por "random", aleatorio), una función d*** (por "density", densidad), una función p*** (por "probability", probabilidad) y una función q*** (por "quantile", cuartilo). Estamos más interesados en las funciones r*** en esta lección, pero te aliento a que explores las otras por tu cuenta.
 
 - Class: cmd_question
-  Output: Una variable aleatoria binomial representa el número de "éxitos" (caras) en un determinado número de "evaluaciones" independientes (lanzamientos de moneda). Por lo tanto, podemos general una variable aleatoria simple que represente el número de caras en 100 lanzamientos arreglados usando rbinom(1, size = 100, prob = 0.7). Nota que sólo especificas la probabilidad de "éxitos" (caras) y NO la probabilidad de "fracasos" (cruces). Inténtalo ahora.
+  Output: Una variable aleatoria binomial representa el número de "éxitos" (caras) en un determinado número de "evaluaciones" independientes (lanzamientos de moneda). Por lo tanto, podemos generar una variable aleatoria simple que represente el número de caras en 100 lanzamientos arreglados usando rbinom(1, size = 100, prob = 0.7). Nota que sólo especificas la probabilidad de "éxitos" (caras) y NO la probabilidad de "fracasos" (cruces). Inténtalo ahora.
   CorrectAnswer: rbinom(1, size = 100, prob = 0.7)
   AnswerTests: match_call('rbinom(1, size = 100, prob = 0.7)')
   Hint: Llama a rbinom() con n = 1, size = 100, y prob = 0.7
@@ -125,7 +125,7 @@
   Hint: Usa rnorm(10) para general 10 números aleatorios a partir de una distribución estándar normal
 
 - Class: cmd_question
-  Output: Haz lo mismo, excepto para una media de 100 y una desviación estandar de 25.
+  Output: Haz lo mismo, excepto para una media de 100 y una desviación estándar de 25.
   CorrectAnswer: rnorm(10, 100, 25)
   AnswerTests: match_call('rnorm(10, 100, 25)')
   Hint: Usa rnorm(10, mean = 100, sd = 25) para general 10 números aleatorios a partir de una distribución normal con una media de 100 y una desviación estándar de 25
@@ -152,13 +152,13 @@
   Hint: Imprime los contenidos de my_pois en la consola
 
 - Class: cmd_question
-  Output: replicate() ha creado una matriz, cada columna de la cual contiene 5 números aleatorios generados a partir de una distribución de Poisson con media de 10. Ahora podemos hallar la media de cada columna en my_pois usando la función colMeans(). Almacena el resultado en una variable llamda cm.
+  Output: replicate() ha creado una matriz, cada columna de la cual contiene 5 números aleatorios generados a partir de una distribución de Poisson con media de 10. Ahora podemos hallar la media de cada columna en my_pois usando la función colMeans(). Almacena el resultado en una variable llamada cm.
   CorrectAnswer: cm <- colMeans(my_pois)
   AnswerTests: omnitest('cm <- colMeans(my_pois)')
   Hint: Usa cm <- colMeans(my_pois) para crear un vector de columnas de las medias, almacenando el resultado en cm
 
 - Class: cmd_question
-  Output: Y hechemos un vistazo a la distribución de las medias de nuestras columnas ploteando un histograma con hist(cm).
+  Output: Y echemos un vistazo a la distribución de las medias de nuestras columnas ploteando un histograma con hist(cm).
   CorrectAnswer: hist(cm)
   AnswerTests: omnitest('hist(cm)')
   Hint: hist(cm) te dará un histograma de las medias de las columnas
@@ -167,7 +167,7 @@
   Output: Parece que las medias de nuestras columnas presentan una distribución casi normal, ¿verdad? Ese es el Teorema del Límite Central en acción, ¡pero esa es una lección para otro día!
 
 - Class: text
-  Output: Todas las distribuciones estándar de probabilidad están incluidas en R, incluyendo las distribuciones exponencial (rexp()), chi-cuadrado (rchisq()), gamma (rgamma()), ... Bueno, ves el patrón.
+  Output: Todas las distribuciones estándar de probabilidad están incluidas en R, incluyendo las distribuciones: exponencial (rexp()), chi-cuadrado (rchisq()), gamma (rgamma()), ... Bueno, ves el patrón.
 
 - Class: text
   Output: La simulación es prácticamente un campo de especialización por su cuenta y únicamente hemos tocado la superficie de lo que es posible. Te aliento a que explores estas y otras funciones por tu cuenta.
