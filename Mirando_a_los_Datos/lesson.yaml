@@ -71,10 +71,10 @@
   Hint: head(plants) te mostrará el inicio del conjunto de datos
 
 - Class: text
-  Output: Tomate un minuto para ver y entender bien el resultado anterior. Cada fila está etiquetada con el número de observación y cada columna con el nombre de la variable. Tu pantalla probablemente no es lo suficientemente ancha para ver todas las 10 columnas una a lado de otra, en cuyo caso R muestra tantas columnas como sea posible en cad línea antes de continua con la siguiente.
+  Output: Tomate un minuto para ver y entender bien el resultado anterior. Cada fila está etiquetada con el número de observación y cada columna con el nombre de la variable. Tu pantalla probablemente no es lo suficientemente ancha para ver todas las 10 columnas una a lado de otra, en cuyo caso R muestra tantas columnas como sea posible en cada línea antes de continuar con la siguiente.
 
 - Class: cmd_question
-  Output: Por defecto, head() te muestra las primeras seis filas de los datos. Puedes alterar este comportamiento pasando como un segudo argumento el número de filas que quiseras ver. Usa head() para previsualizar las primeras 10 filas de plants.
+  Output: Por defecto, head() te muestra las primeras seis filas de los datos. Puedes alterar este comportamiento pasando como un segundo argumento el número de filas que quieras ver. Usa head() para previsualizar las primeras 10 filas de plants.
   CorrectAnswer: head(plants, 10)
   AnswerTests: omnitest(correctExpr='head(plants, 10)')
   Hint: head(plants, 10) te mostrará las primeras 10 filas del conjunto de datos
@@ -98,22 +98,22 @@
   Output: Para variables categóricas (llamadas variables "factores" en R), summary() muestra el número de veces que cada valor (o "nivel") aparece en los datos. Por ejemplo, cada valor de Scientific_Name aparece sólo una vez, dado que es único para una planta específica. En contraste, el sumario para Duration (también una variable factor) nos dice que nuestro conjunto de datos contiene 3031 plantas perennes (Perennial), 682 plantas anuales (Annual), etc.
 
 - Class: cmd_question
-  Output: Puedes ver que R ha truncado el sumario para Active_Growth_Period incluyendo una categoría inclusiva llamda "Others" ("otros"). Dado que es una variable categórica/factor, podemos ver cuántas veces cada valor realmente aparece en nuestros datos con table(plants$Active_Growth_Period).
+  Output: Puedes ver que R ha truncado el sumario para Active_Growth_Period incluyendo una categoría inclusiva llamada "Others" ("otros"). Dado que es una variable categórica/factor, podemos ver cuántas veces cada valor realmente aparece en nuestros datos con table(plants$Active_Growth_Period).
   CorrectAnswer: table(plants$Active_Growth_Period)
   AnswerTests: omnitest(correctExpr='table(plants$Active_Growth_Period)')
   Hint: table(plants$Active_Growth_Period) mostrará los conteos de cada nivel de la variable factor
 
 - Class: text
-  Output: Cada una de las funciones que hemos presentado hasta ahora tiene su motivo de hacerte entender mejor la estrucutra de tus datos. Sin embargo, hemos dejado lo mejor para el final ...
+  Output: Cada una de las funciones que hemos presentado hasta ahora tiene su motivo de hacerte entender mejor la estructura de tus datos. Sin embargo, hemos dejado lo mejor para el final ...
 
 - Class: cmd_question
   Output: Quizás la función más útil y concisa para entender la e*str*uctura de tus datos es str(). Pruébala ahora.
   CorrectAnswer: str(plants)
   AnswerTests: omnitest(correctExpr='str(plants)')
-  Hint: Usa str(plants) para ver la estrctura de tus datos
+  Hint: Usa str(plants) para ver la estructura de tus datos
 
 - Class: text
-  Output: Lo bello de str() es que combina muchas de las características de las otras funciones que ya has visto, todo en un formato conciso y leíble. Al comiento nos dice que la clase de plants es "data.frame" y que tiene 5166 observaciones y 10 variables. Nos da el nombre y clase de cada variable, así como una previsualización de sus contenidos.
+  Output: Lo bello de str() es que combina muchas de las características de las otras funciones que ya has visto, todo en un formato conciso y leíble. Al comienzo nos dice que la clase de plants es "data.frame" y que tiene 5166 observaciones y 10 variables. Nos da el nombre y clase de cada variable, así como una previsualización de sus contenidos.
 
 - Class: text
   Output: str() es realmente una función muy general que puedes usar con la mayoría de los objetos en R. Cada vez que quieras entender la estructura de algo (un conjunto de datos, función, etc.), str() es un buen lugar para empezar.
