@@ -29,7 +29,7 @@
   Hint: Visualiza los primeros diez elementos de x con x[1:10].
 
 - Class: text
-  Output: Los índices vectores vienen en cuatro diferentes sabors -- vectores lógicos, vectores de íntegros positivos, vectores de íntegros negativos, y vectores de cadenas de caracteres ("nombrados") -- cada uno de los cuales cubriremos en esta lección.
+  Output: Los índices vectores vienen en cuatro diferentes sabores -- vectores lógicos, vectores de íntegros positivos, vectores de íntegros negativos, y vectores de cadenas de caracteres ("nombrados") -- cada uno de los cuales cubriremos en esta lección.
 
 - Class: text
   Output: Empecemos por indexar con vectores lógicos. Un escenario común cuando se trabajan con datos reales es querer extraer todos los elementos de un vector que no sean NA (i.e., datos ausentes). Recuerda que is.na(x) producirá un vector de valores lógicos de la misma longitud de x, con TRUEs correspondiendo a valores NA y FALSEs correspondiendo a valores que no son NA en x.
@@ -82,7 +82,7 @@
   Hint: Intenta x[x > 0] para ver por qué no usamos este enfoque.
 
 - Class: text
-  Output: Debido a que NA no es un valor sino más bien un marcador de posición para una cantidad desconocida, la expresión NA > 0 se evalua como NA. De ahí que obtengamos un montón de NAs entremezclados entre nuestros números positivos cuando hacemos esto.
+  Output: Debido a que NA no es un valor sino más bien un marcador de posición para una cantidad desconocida, la expresión NA > 0 se evalúa como NA. De ahí que obtengamos un montón de NAs entremezclados entre nuestros números positivos cuando hacemos esto.
 
 - Class: cmd_question
   Output: Combinando nuestro conocimiento sobre operadores lógicos con nuestro nuevo conocimiento sobre subagrupación podemos hacer esto -- x[!is.na(x) & x > 0]. Inténtalo.
@@ -91,7 +91,7 @@
   Hint: Prueba x[!is.na(x) & x > 0] para ver qué obtienes.
 
 - Class: text
-  Output: En este caso, solictamos sólo valores de x que sean ambos no ausentes Y mayores que cero.
+  Output: En este caso, solicitamos sólo valores de x que sean ambos no ausentes Y mayores que cero.
 
 - Class: text
   Output: Ya te he mostrado cómo subagrupar solamente los primeros diez valores usando x[1:10]. En este caso, estamos proveyendo de un vector de íntegros positivos dentro de los corchetes, lo que le dice a R que regrese sólo los elementos de x numerados del 1 al 10.
@@ -106,7 +106,7 @@
   Hint: Crea un vector de índices con c(3, 5, 7), luego colócalo dentro de los corchetes.
 
 - Class: cmd_question
-  Output: Es importante que cuando uses vectores íntegros para subagrupar nuestro vector x, nos limitemos al conjunto de índices {1, 2, ..., 40} debido a que x tiene sólo 40 elementos. ¿Qué pasa si pedimos por el elemento 0 de x (i.e., x[0])? Pruebalo.
+  Output: Es importante que cuando uses vectores íntegros para subagrupar nuestro vector x, nos limitemos al conjunto de índices {1, 2, ..., 40} debido a que x tiene sólo 40 elementos. ¿Qué pasa si pedimos por el elemento 0 de x (i.e., x[0])? Pruébalo.
   CorrectAnswer: x[0]
   AnswerTests: omnitest(correctExpr='x[0]')
   Hint: Intenta x[0] para ver qué pasa cuando nos referimos al elemento 0 de un vector, el cual no está definido en R.
@@ -124,7 +124,7 @@
   Output: ¿Y si estuviésemos interesados en todos los elementos de x EXCEPTO el 2º y el 10º? Sería muy tedioso construir un vector conteniendo todos los números del 1 al 40 EXCEPTO 2 y 10.
 
 - Class: cmd_question
-  Output: Por suerte, R acepta índices íntegros negativos. Mientras que x[c(2, 10)] nos da SOLO el 2º y el 10º elementos de x, x[c(-2, -10)] nos da todos los elementos de x EXCEPTO el 2º y 10º elementos. Prueba x[c(-2, -10)] ahora para ver ésto.
+  Output: Por suerte, R acepta índices íntegros negativos. Mientras que x[c(2, 10)] nos da SOLO el 2º y el 10º elementos de x, x[c(-2, -10)] nos da todos los elementos de x EXCEPTO el 2º y 10º elementos. Prueba x[c(-2, -10)] ahora para ver esto.
   CorrectAnswer: x[c(-2, -10)]
   AnswerTests: omnitest(correctExpr='x[c(-2, -10)]')
   Hint: Intenta x[c(-2, -10)].
@@ -133,7 +133,7 @@
   Output: Una manera más corta de especificar múltiples números negativos es colocar el signo menos por delante del vector de números positivos. Tipea x[-c(2, 10)] para obtener exactamente los mismos resultados.
   CorrectAnswer: x[-c(2, 10)]
   AnswerTests: omnitest(correctExpr='x[-c(2, 10)]')
-  Hint: Usa x[-c(2, 10)] para simplicar un poco las cosas. Esto podría ahorrar mucho tiempo si es que se especifican muchos índices negativos.
+  Hint: Usa x[-c(2, 10)] para simplificar un poco las cosas. Esto podría ahorrar mucho tiempo si es que se especifican muchos índices negativos.
 
 - Class: text
   Output: Hasta ahora, hemos cubierto tres tipos de vectores de índice -- lógicos, de íntegros positivos, y de íntegros negativos. El único tipo que nos queda presenta el concepto de elementos "nombrados".
@@ -157,7 +157,7 @@
   Hint: Verifica los resultados de names(vect).
 
 - Class: cmd_question
-  Output: Alternativmente, podemos crear un vector vect2 sin nombres con c(11, 2, NA). Haz esto ahora.
+  Output: Alternativamente, podemos crear un vector vect2 sin nombres con c(11, 2, NA). Haz esto ahora.
   CorrectAnswer: vect2 <- c(11, 2, NA)
   AnswerTests: omnitest(correctExpr='vect2 <- c(11, 2, NA)')
   Hint: Crea un vector ordinario (sin nombres) llamado vect2 que contenga c(11, 2, NA).
