@@ -108,40 +108,40 @@
   Hint: Sólo para ilustrar cómo el operador AND funciona tipea FALSE & FALSE
 
 - Class: cmd_question
-  Output: Puedes usar el operador `&` para evaluar AND a través de un vector. La versión `&&` de AND solamente evalúa el primer miembro de un vector. Probemos ambos para practicar. Tipea la expresión TRUE & c(TRUE, FALSE, FALSE).
+  Output: Puedes usar el operador `&` para evaluar AND elemento a elemento en un vector. Tipea la expresión TRUE & c(TRUE, FALSE, FALSE).
   CorrectAnswer: TRUE & c(TRUE, FALSE, FALSE)
   AnswerTests: omnitest(correctExpr='TRUE & c(TRUE, FALSE, FALSE)')
-  Hint: Ahora para ver cómo el operador AND trabaja con un vector tipea TRUE & c(TRUE, FALSE, FALSE)
+  Hint: Para ver cómo el operador AND trabaja con un vector tipea TRUE & c(TRUE, FALSE, FALSE)
 
 - Class: text
-  Output: Lo que pasa en este caso es que el operando izquierdo `TRUE` es reciclado a través de cada elemento del operando derecho. Esto es equivalente a la afirmación c(TRUE, TRUE, TRUE) & c(TRUE, FALSE, FALSE).
+  Output: Lo que pasa en este caso es que el operando izquierdo `TRUE` es reciclado a través de cada elemento del operando derecho. Esto es equivalente a c(TRUE, TRUE, TRUE) & c(TRUE, FALSE, FALSE).
 
 - Class: cmd_question
-  Output: Ahora tipearemos la misma expresión excepto que usaremos el operador `&&`. Tipea la expresión TRUE && c(TRUE, FALSE, FALSE).
-  CorrectAnswer: TRUE && c(TRUE, FALSE, FALSE)
-  AnswerTests: omnitest(correctExpr='TRUE && c(TRUE, FALSE, FALSE)')
-  Hint: Como verás, la versión && de AND trabaja de manera distinta. Tipea TRUE && c(TRUE, FALSE, FALSE)
+  Output: En cambio, `&&` se usa para comparar valores lógicos individuales, es decir, de longitud 1. Si tenemos un vector, primero debemos extraer un solo valor. Tipea TRUE && c(TRUE, FALSE, FALSE)[1].
+  CorrectAnswer: TRUE && c(TRUE, FALSE, FALSE)[1]
+  AnswerTests: omnitest(correctExpr='TRUE && c(TRUE, FALSE, FALSE)[1]')
+  Hint: Tipea TRUE && c(TRUE, FALSE, FALSE)[1]
 
 - Class: text
-  Output: En este caso, el operando izquierdo solamente es evaluado con el primer miembro del operando derecho (el vector). El resto de los elementos en el vector no son evaluados para nada en esta expresión.
+  Output: En este caso, no es `&&` quien selecciona el primer elemento del vector. Somos nosotros quienes extraemos explícitamente el primer valor con `[1]`, para entregarle a `&&` un único valor lógico.
+
+- Class: text
+  Output: En versiones antiguas de R, `&&` podía usar solo el primer elemento de un vector más largo, usualmente con advertencia. En versiones actuales, esto genera error. Por eso, `&&` debe usarse con valores lógicos individuales, especialmente en condiciones como `if`.
 
 - Class : text
-  Output: El operador OR sigue un conjunto similar de reglas. La versión `|` de OR evalúa OR a lo largo de todo un vector, mientras que la versión `||` de OR solamente evalúa el primer miembro de un vector.
-
-- Class : text
-  Output: Una expresión usando el operador OR se evaluará como TRUE si el operando izquierdo o el operando derecho son TRUE. Si ambos son TRUE, la expresión se evaluará como TRUE. Sin embargo, si ninguno es TRUE, entonces la expresión será FALSE.
+  Output: El operador OR sigue una lógica similar. La versión `|` evalúa OR elemento a elemento a lo largo de un vector, mientras que la versión `||` se usa para comparar valores lógicos individuales.
 
 - Class: cmd_question
   Output: Probemos la versión vectorizada del operador OR. Tipea la expresión TRUE | c(TRUE, FALSE, FALSE).
   CorrectAnswer: TRUE | c(TRUE, FALSE, FALSE)
   AnswerTests: omnitest(correctExpr='TRUE | c(TRUE, FALSE, FALSE)')
-  Hint: Prueba el operador OR vectorizado tipeando c(TRUE, FALSE, FALSE)
+  Hint: Tipea TRUE | c(TRUE, FALSE, FALSE)
 
 - Class: cmd_question
-  Output: Ahora probemos la versión no-vectorizada del operador OR. Tipea la expresión TRUE || c(TRUE, FALSE, FALSE).
-  CorrectAnswer: TRUE || c(TRUE, FALSE, FALSE)
-  AnswerTests: omnitest(correctExpr='TRUE || c(TRUE, FALSE, FALSE)')
-  Hint: Como verás, la versión || de OR no está vectorizada. Tipea TRUE || c(TRUE, FALSE, FALSE)
+  Output: Ahora probemos la versión no vectorizada del operador OR. Como `||` requiere valores lógicos individuales, extraeremos primero un solo elemento del vector. Tipea TRUE || c(TRUE, FALSE, FALSE)[1].
+  CorrectAnswer: TRUE || c(TRUE, FALSE, FALSE)[1]
+  AnswerTests: omnitest(correctExpr='TRUE || c(TRUE, FALSE, FALSE)[1]')
+  Hint: Tipea TRUE || c(TRUE, FALSE, FALSE)[1]
 
 - Class : text
   Output: Los operadores lógicos pueden ser encadenados juntos exactamente al igual que los operadores aritméticos. Es perfectamente normal ver expresiones como `6 != 10 && FALSE && 1 >= 2` o `TRUE || 5 < 9.3 || FALSE`.
